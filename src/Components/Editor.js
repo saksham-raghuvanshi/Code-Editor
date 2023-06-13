@@ -19,13 +19,16 @@ export default function Editor(props) {
       <CodeMirror
         onBeforeChange={handleChange}
         value={value}
-        // className="code-mirror"
+        className="code-mirror"
         options={{
           lineWrapping: true,
-          lineNumbers: true,
-          mode: language,
           lint: true,
+          mode: language,
+          theme: "material",
+          lineNumbers: true,
         }}
+
+        //React.StrictMode remove from index.js
       />
     </div>
   );
